@@ -3,13 +3,15 @@
  * Q-OPS
 
   APP has two part
-    Back - end
-    Fron - tend
+    Backend
+    Frontend
 
   RUBY Version 2.3.1
 
   RAILS Version 5.0.0
 
+  Travis test
+    https://travis-ci.org/Golfer/qops.svg?branch=master
   DB
     - Development /MYSQL/
     - Production /Postgrase/

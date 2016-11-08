@@ -12,4 +12,3 @@ before_script:
   - cp config/database.travis.yml config/database.yml
   - cp config/secrets.yml.example config/secrets.yml
   - mysql -e 'create database qops_test'
-

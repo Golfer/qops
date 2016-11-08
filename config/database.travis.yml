@@ -5,6 +5,8 @@ base: &base
   collation: utf8_general_ci
   timeout: 5000
   host: localhost
+  username: loc_user
+  password: 123456789
   pool: 5
 
 development:
@@ -14,5 +16,5 @@ development:
 test:
   <<: *base
   database: qops_test
-  username: travis
-  encoding: utf8
+  username: <%= ENV['TRAVIS'] ? 'travis' : loc_user %>
+  password: <%= ENV['TRAVIS'] ? '' : 123456789 %>
