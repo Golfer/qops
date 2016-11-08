@@ -1,9 +1,7 @@
+[![Build Status](https://api.travis-ci.org/Golfer/qops.svg?branch=master)](http://travis-ci.org/Golfer/qops)
 == Q-project
 
  * Q-OPS
-
-  Travis test
-    [![Build Status](https://api.travis-ci.org/Golfer/qops.svg?branch=master)](http://travis-ci.org/Golfer/qops)
 
   APP has two part
     Backend
