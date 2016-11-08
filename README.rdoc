@@ -1,6 +1,9 @@
-== Q-project WIKI
+== Q-project
 
  * Q-OPS
+
+  Travis test
+    [![Build Status](https://api.travis-ci.org/Golfer/qops.svg?branch=master)](http://travis-ci.org/Golfer/qops)
 
   APP has two part
     Backend
@@ -10,8 +13,6 @@
 
   RAILS Version 5.0.0
 
-  Travis test
-    https://travis-ci.org/Golfer/qops.svg?branch=master
   DB
     - Development /MYSQL/
     - Production /Postgrase/
