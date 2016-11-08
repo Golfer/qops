@@ -1,0 +1,70 @@
+*
+  margin: 0
+html, body
+  height: 100%
+  padding-top: 60px
+  margin: 0 auto -8em
+  .container
+    min-height: 90%
+    height: auto !important
+    height: 90%
+
+@font-face
+  font-family: 'Glyphicons Halflings'
+  src: url(asset_path("glyphicons-halflings-regular.ttf"))
+  src: url(asset_path("glyphicons-halflings-regular.woff"))
+
+$sizes: 15 30 60 80 100 120 130 160
+@each $size in $sizes
+  .mw#{$size}
+    width: #{$size}px !important
+    max-width: #{$size}px
+    min-width: #{$size}px
+
+$sizes: 15 30 60 80 100 120 130 160
+@each $size in $sizes
+  .mh#{$size}
+    height: #{$size}px !important
+    max-height: #{$size}px
+    min-height: #{$size}px
+
+
+footer
+  border-top: 1px solid #EFEFEF
+  min-height: 30px
+  height: 30px
+  ul
+    list-style-type: none
+    li
+      display: inline
+      text-transform: uppercase
+      border-radius: 2px
+      margin-bottom: 5px
+      margin-right: 2px
+      font-family: "Anonymous Pro", "Inconsolata", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace
+      text-decoration: none
+      a
+        background-color: #2759ac
+        padding: 10px
+        color: #fff
+        display: inline-block
+        font-size: 14px
+        text-transform: uppercase
+        line-height: 11px
+        border-radius: 2px
+        margin-bottom: 5px
+        margin-right: 2px
+        text-decoration: none
+        a:hover
+          background-color: #a31e26
+      .social
+        &.vk
+          background-color: #4d90fe
+        &.facebook
+          background-color: #2759ac
+        &.google-plus
+          background-color: #cc0000
+
+
+.navbar
+  background-color: white

@@ -1,0 +1,1 @@
+$(".publicated[data-id='#{@quotation.id}']").parent().html("#{escape_javascript(render partial: 'admin/quotations/shared/btn_block', locals: { quotation: @quotation } )}")

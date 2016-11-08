@@ -1,0 +1,4 @@
+- if @latest_quotations.present?
+  .data_list
+    %ul
+      = render partial: 'quotations/quotation', locals: {quotations: @latest_quotations}

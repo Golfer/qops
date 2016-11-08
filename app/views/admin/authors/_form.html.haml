@@ -7,7 +7,16 @@
           - author.errors.full_messages.each do |msg|
             %li= msg
     .form-group.field
-      = f.label :name, 'Author Name'
-      = f.text_field :full_name, class: 'form-control'
+      = f.text_field :full_name, class: 'form-control', placeholder: 'Author Name'
+    .form-group.field
+      = f.text_field :pseudonym, class: 'form-control', placeholder: 'Pseudonym'
+    .form-group.field
+      = f.text_field :publicated, class: 'form-control', placeholder: 'Publicated date'
+    .form-group.field
+      = f.text_area :description, class: 'form-control', placeholder: 'Description text'
+    .form-group.field
+      = f.text_field :burn_date, class: 'form-control', placeholder: 'Date burn'
+    .form-group.field
+      = f.text_field :die_date, class: 'form-control', placeholder: 'Die date'
     .form-group
       = f.submit action_name == 'edit' ? 'Update' : 'Create', class: 'form-control btn btn-primary submit-button'

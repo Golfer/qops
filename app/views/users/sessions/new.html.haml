@@ -1,0 +1,21 @@
+.login-container
+  %h1
+    Please Sign In by Email or SN
+  .social-login-btn
+    = render partial: 'users/shared/social_links'
+  = form_for resource, as: resource_name, url: session_path(resource_name),  html: { role: 'form' } do |f|
+    .form-group
+      = f.label :email, class: ''
+      = f.email_field :email, autofocus: true, placeholder: 'Email', class: 'form-control'
+    .form-group
+      - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+        = link_to "Forgot your password?", new_password_path(resource_name), class: 'pull-right'
+      = f.label :password
+      = f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control'
+    .form-group.checkbox
+      %label
+        = f.check_box :remember_me
+        = f.label :remember_me
+    %button.pull-right.btn.btn.btn-primary.loginmodal-submit{type: 'submit'}
+      Log In
+  = render 'users/shared/links'

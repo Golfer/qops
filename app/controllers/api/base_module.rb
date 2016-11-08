@@ -5,7 +5,10 @@ module Api
     end
 
     def deprecated
-      respond_with({error: 'This version of api is deprecated.', deprecated: true}, {status: 400, location: root_url})
+      respond_with({ error: 'This version of api is deprecated.',
+                     deprecated: true},
+                   { status: 400, location: root_url }
+      )
     end
 
     def controller_module
@@ -15,15 +18,15 @@ module Api
     def serializer(klass)
       "#{controller_module}::#{klass.name}Serializer".constantize
     rescue => e
-      fail("There is no serializer for #{klass.name}: #{e}")
+      flash.now[:error] = "There is no serializer for #{klass.name}: #{e}"
     end
 
     # object or relation
     def serialize(object, options = serialize_params)
       if object.kind_of?(ActiveRecord::Base) || object.kind_of?(Hash)
-        serializer(options[:class] || object.class).new(current_user, object, options)
+        serializer(options[:class] || object.class).new(object, options)
       else
-        serializer(options[:class] || object.klass).collection(current_user, object, options)
+        serializer(options[:class] || object.klass).collection(object, options)
       end
     end
 

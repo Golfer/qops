@@ -11,4 +11,4 @@
           %th{scope: 'row'}= author.id
           %td= author.full_name
           %td= render partial: 'admin/authors/block_btn', locals: {author: author}
-      = will_paginate authors
+      = will_paginate authors, renderer: BootstrapPagination::Rails

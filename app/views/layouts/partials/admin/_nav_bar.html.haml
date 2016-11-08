@@ -1,18 +1,18 @@
-%nav.admin_nav.navbar-inverse.navbar.navbar-fixed-top{role: 'navigation'}
+%nav.admin_nav.navbar-inverse.navbar-inner.navbar-fixed-top{role: 'navigation'}
   .container-fluid
     .navbar-header
-      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", type: "button"}
+      %button.navbar-toggle.collapsed{type: 'button', data: { target: '.navbar-collapse', toggle: 'collapse'} }
         %span.sr-only Toggle navigation
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'Admin Panel Q-Project', %i(admin root), class: 'navbar-brand'
+      = link_to 'Q-Project', root_path, class: 'navbar-brand'
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
-        -#%li{class: controller_name == 'categories' ? 'active' : ''}
-        -#  = link_to admin_categories_path do
-        -#    Categories
-        -#    %span.sr-only (current)
+        %li{class: controller_name == 'categories' ? 'active' : ''}
+          = link_to admin_categories_path do
+            Categories
+            %span.sr-only (current)
         %li{class: controller_name == 'authors' ? 'active' : ''}
           = link_to admin_authors_path do
             Authors
@@ -21,8 +21,9 @@
           = link_to admin_quotations_path do
             Quotations
             %span.sr-only
-        -#%li{class: controller_name == 'tags' ? 'active' : ''}
-        -#  = link_to admin_tags_path do
-        -#    Tags
-        -#    %span.sr-only
-      %ul.nav.navbar-nav.navbar-right
+        %li{class: controller_name == 'tags' ? 'active' : ''}
+          = link_to admin_tags_path do
+            Tags
+            %span.sr-only
+      = render 'shared/nav_user_links'
+

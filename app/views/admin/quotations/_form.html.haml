@@ -11,9 +11,6 @@
       = f.text_field :publicated_date, class: 'form-control'
     .form-group.field
       = f.label :text, 'Short text Quotation'
-      = f.text_field :text, class: 'form-control'
-    .form-group.field
-      = f.label :full_text
-      = f.text_area :full_text, class: 'form-control wysihtml5'
+      = f.text_field :text, class: 'form-control wysihtml5'
     .form-group
       = f.submit action_name == 'edit' ? 'Update' : 'Create', class: 'form-control btn btn-primary submit-button'

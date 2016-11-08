@@ -1,5 +1,5 @@
-.pull-right
-  = link_to 'Create new Author', new_admin_author_path, class: 'btn btn-primary'
-
-.quotation_list
-  = render partial: 'admin/authors/lhs_table', locals: {authors: @authors}
+.data_list
+  = render partial: 'admin/authors/list', locals: { authors: @authors }
+.container
+  .row
+    = link_to 'Create new Author', new_admin_author_path, class: 'btn btn-primary'

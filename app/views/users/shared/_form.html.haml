@@ -1,0 +1,29 @@
+.panel-body
+  -#= form_for user, url: action_path,  html: {class: 'form-horizontal', role: 'form'} do |f|
+  = form_for user,  html: {class: 'form-horizontal', role: 'form'} do |f|
+    - if user.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(user.errors.count, "error")} User save have some problems:"
+        %ul
+          - user.errors.full_messages.each do |msg|
+            %li= msg
+    .form-group.field
+      = f.label :full_name
+      = f.text_field :full_name, class: 'form-control'
+    .form-group.field
+      = f.label :email
+      = f.text_field :email, class: 'form-control'
+    -#.form-group
+      = f.label :password
+      - if @minimum_password_length
+        %em
+          (#{@minimum_password_length} characters minimum)
+      = f.password_field :password, autocomplete: "off",  placeholder: 'Password', class: 'form-control'
+    -#.form-group
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirm password', class: 'form-control'
+    -#.form-group.field
+    -#  = f.label :full_text
+    -#  = f.text_area :full_text, class: 'form-control wysihtml5'
+    .form-group
+      = f.submit 'Edit Profile', class: 'form-control btn btn-primary submit-button'

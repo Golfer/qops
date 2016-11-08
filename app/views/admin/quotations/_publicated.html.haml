@@ -1,0 +1,5 @@
+- not_visible = quotation.publicated ? 'false' : 'true'
+- name_class = not_visible == 'true' ? 'fa-eye-slash' : 'fa-eye'
+%span{class: "visible-#{not_visible}"}
+  = link_to publicated_admin_quotation_path(quotation), data: {remote: true, method: :get}, class: 'btn btn-default' do
+    %i.fa{class: name_class}

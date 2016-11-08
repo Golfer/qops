@@ -1,0 +1,7 @@
+.row
+  .col-md-12
+    %h3= @author.full_name
+    = link_to 'Publicate', admin_author_publicate_path(@author)
+    = link_to 'UN-Publicate', admin_author_unpublicate_path(@author)
+%hr
+= render partial: 'admin/quotations/shared/list', locals: { quotations: @quotations }

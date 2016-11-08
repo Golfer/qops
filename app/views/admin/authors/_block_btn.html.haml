@@ -1,5 +1,13 @@
 .pull-right
-  = link_to admin_author_path(author), method: :delete, data: { remote: true, confirm: 'Are you sure?' } do
-    %i.fa.fa-trash
-  = link_to edit_admin_author_path(author) do
+  -#= link_to 'Publicate', admin_author_publicate_path(author)
+  -#= link_to 'UN-Publicate',
+  = link_to admin_author_publicate_path(author), class: 'btn btn-warning', data: { remote: true }  do
+    %span Q - show
+  = link_to admin_author_unpublicate_path(author), class: 'btn btn-warning', data: { remote: true, confirm: 'You wants to publicate all quotations' } do
+    %span Q - hide
+  = link_to admin_author_path(author), class: 'btn btn-info' do
+    %i.fa.fa-list
+  = link_to edit_admin_author_path(author), class: 'btn btn-primary' do
     %i.fa.fa-pencil
+  = link_to admin_author_path(author), class: 'btn btn-danger', method: :delete, data: { remote: true, confirm: 'Are you sure?' } do
+    %i.fa.fa-trash

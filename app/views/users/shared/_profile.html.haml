@@ -1,0 +1,29 @@
+.profile-sidebar
+  .profile-userpic
+    -#%img.img-responsive{:alt => "", :src => "http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg"}/
+  .profile-usertitle
+    .profile-usertitle-name
+      %strong= current_user.email
+    .profile-usertitle-job
+      = current_user.roles.map{|r| r.name}
+  .profile-userbuttons
+    %button.btn.btn-success.btn-sm{type: "button"} Follow
+    %button.btn.btn-danger.btn-sm{type: "button"} Message
+  .profile-usermenu
+    %ul.nav
+      %li.active
+        %a{href: "#"}
+          %i.glyphicon.glyphicon-home
+          Overview
+      %li
+        %a{href: "#"}
+          %i.glyphicon.glyphicon-user
+          Account Settings
+      %li
+        %a{href: "#", target: "_blank"}
+          %i.glyphicon.glyphicon-ok
+          Tasks
+      %li
+        %a{href: "#"}
+          %i.glyphicon.glyphicon-flag
+          Help

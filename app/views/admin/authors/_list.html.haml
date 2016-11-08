@@ -1,0 +1,10 @@
+- if authors
+  %ul
+    - authors.each do |author|
+      %li{ data: { id: author.id } }
+        .row
+          .col-md-6
+            = author.full_name
+          .col-md-6
+            = render partial: 'admin/authors/block_btn', locals: { author: author }
+    = will_paginate authors, renderer: BootstrapPagination::Rails

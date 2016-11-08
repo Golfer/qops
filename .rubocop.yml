@@ -25,3 +25,6 @@ Documentation:
 
 Style/Encoding:
   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

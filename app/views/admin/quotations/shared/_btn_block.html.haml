@@ -1,0 +1,5 @@
+= render partial: 'admin/quotations/publicated', locals: { quotation: quotation }
+= link_to edit_admin_quotation_path(quotation), class: 'btn btn-default' do
+  %i.fa.fa-pencil
+= link_to admin_quotation_path(quotation), class: 'btn btn-default', method: :delete, data: { remote: true, confirm: 'Are you sure?' } do
+  %i.fa.fa-trash

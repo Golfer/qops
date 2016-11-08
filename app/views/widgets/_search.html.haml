@@ -1,0 +1,9 @@
+.container.dashboard
+  %form{role: 'form'}
+    .row
+      .form-group.search-group
+        .input-group
+          %input.form-control{name: 'search', placeholder: 'author, word, tag etc...', required: '', type: 'text'}/
+          %span.input-group-btn
+            %button.btn.btn-success{type: 'submit'}
+              %span.fa.fa-search{ aria: { hidden: true } }

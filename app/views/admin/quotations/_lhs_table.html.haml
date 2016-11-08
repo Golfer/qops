@@ -9,6 +9,6 @@
       - quotations.each do |quotation|
         %tr
           %th{scope: 'row'}= quotation.id
-          %td= quotation.full_text
+          %td= quotation.text
           %td= render partial: 'admin/quotations/block_btn', locals: {quotation: quotation}
-      = will_paginate quotations
+= will_paginate quotations#, renderer: BootstrapPagination::Rails

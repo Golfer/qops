@@ -1,0 +1,16 @@
+.data_list
+  - if quotations
+    %ul
+      - quotations.each do |quotation|
+        %li{data: {id: quotation.id } }
+          .row
+            = quotation.text
+          .row
+            .col-md-9
+              = quotation.source
+              = quotation.publicated_date
+            .col-md-3
+              .btn-block.publicated{ data: {id: quotation.id } }
+                = render partial: 'admin/quotations/shared/btn_block', locals: { quotation: quotation }
+      = will_paginate quotations, renderer: BootstrapPagination::Rails
+

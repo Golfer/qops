@@ -1,28 +1,109 @@
-== README
+== Q-project WIKI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ * Q-OPS
 
-Things you may want to cover:
+  APP has two part
+    Back - end
+    Fron - tend
 
-* Ruby version
+  RUBY Version 2.3.1
 
-* System dependencies
+  RAILS Version 5.0.0
 
-* Configuration
+  DB
+    - Development /MYSQL/
+    - Production /Postgrase/
+```
 
-* Database creation
+* Fix problem SET DB after update rails to 5.0.0
+    RUN this ->
+        rake db:environment:set RAILS_ENV=development; bundle exec rake db:drop db:create db:migrate
 
-* Database initialization
+*----------------------------------------------*
+  => Action Cable install & configure
+      http://rusrails.ru/action-cable-overview
 
-* How to run the test suite
+      https://github.com/rails/actioncable-examples
+      https://www.youtube.com/watch?v=n0WUjGkDFS0
+      http://www.thegreatcodeadventure.com/rails-5-preview-action-cable/
+       =>  *** For deploy Action cable
+           https://gorails.com/episodes/deploy-actioncable-and-rails-5
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  => turbolinks
+      https://github.com/turbolinks/turbolinks/wiki/Turbolinks-5-FAQ
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  => Devise Invitable
+    https://github.com/scambra/devise_invitable
+
+  => Active Model Serializer
+    https://github.com/rails-api/active_model_serializers/tree/master/docs
+    https://kirillplatonov.com/2014/11/04/active_model_serializer_vs_jbuilder/
+
+
+--------------------------------------------------------------
+Static analysis tool which checks Ruby on Rails applications for security vulnerabilities
+    https://github.com/presidentbeef/brakeman
+
+Prints Ruby objects in full color exposing their internal structure with proper indentation.
+Rails ActiveRecord objects and usage within Rails templates are supported via included mixins.
+    https://github.com/awesome-print/awesome_print
+
+    usage at console: ap Oject
+
+
+
+------------ API ----------
+
+JSON Structure Multy Upload
+===========================
+{
+  "author": { "full_name":"Adam RichardSon-3", "description": "Test Author description" },
+  "quotations": [
+  	{
+      "text": "text Quotation 1",
+      "source": "http://test.com",
+      "tags": ["tag1","tag2","tag3","tag4", "tag5", "tag6"],
+      "categories":["cat1", "cat3", "catN"]
+    },
+    {
+      "text": "text Quotation 2",
+      "source": "http://test.com",
+      "tags": ["tag1","tag2","tag3","tag4", "tag5", "tag6"],
+      "categories":["cat1", "cat3", "catN"]
+    },
+    {
+      "text": "text Quotation 3",
+      "source": "http://test.com",
+      "tags": ["tag1","tag2","tag3","tag4", "tag5", "tag6"],
+      "categories":["cat1", "cat3", "catN"]
+    },
+    {
+      "text": "text Quotation 4",
+      "source": "http://test.com",
+      "categories":["cat1", "cat3", "catN"]
+      "tags": ["tag1","tag2","tag3","tag4", "tag5", "tag6"],
+    },
+    {
+      "text": "text Quotation 5",
+      "source": "http://test.com",
+      "categories":["cat1", "cat3", "catN"]
+    },
+    {
+      "text": "text Quotation 6",
+      "source": "http://test.com",
+      "categories":["cat1", "cat3", "catN"]
+    },
+    {
+      "text": "text Quotation  ---- ",
+      "source": "http://test.com",
+      "categories":["cat1", "cat3", "catN"]
+    },
+    {
+      "text": "text Quotation N",
+      "source": "http://test.com",
+      "categories":["cat1", "cat13", "catN"]
+    }
+  ]
+}
+

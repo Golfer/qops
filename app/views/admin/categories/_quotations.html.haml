@@ -10,13 +10,15 @@
     .row
       - quotations.each do |quotation|
         .col-md-8
-          = quotation.author.full_name
-          = quotation.full_text
-        .col-md-2
+          -#= quotation.author.full_name
+          = quotation.text
+        -#.col-md-2
           %ul
             - quotation.categories.each do |category|
               %li= category.name
-        .col-md-2
+        -#.col-md-2
           %ul
             - quotation.tags.each do |tag|
               %li= tag.name
+    -#.row
+    -#  = will_paginate quotations, renderer: BootstrapPagination::Rails

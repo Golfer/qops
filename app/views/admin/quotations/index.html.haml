@@ -1,5 +1,5 @@
-.pull-right
+.row
   = link_to 'Create new Quotation', new_admin_quotation_path, class: 'btn btn-primary'
-
-.quotation_list
-  = render partial: 'admin/quotations/lhs_table', locals: {quotations: @quotations}
+- unless @quotations.empty?
+  .data_list
+    = render partial: 'admin/quotations/lhs_table', locals: { quotations: @quotations }

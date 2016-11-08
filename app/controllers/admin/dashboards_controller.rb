@@ -1,7 +1,9 @@
-class Admin::DashboardsController < Admin::AdminController
-  def show
-  end
+module Admin
+  class DashboardsController < Admin::BaseAdminController
+    def index
+    end
 
-  def index
+    def show
+    end
   end
 end

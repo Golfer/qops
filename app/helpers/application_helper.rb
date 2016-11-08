@@ -9,6 +9,8 @@ module ApplicationHelper
         'info'
       when :success
         'success'
+      when :timedout
+        ''
       else
         type.to_s
     end

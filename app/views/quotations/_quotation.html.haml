@@ -1,0 +1,8 @@
+- quotations.each do |quotation|
+  %li{id: quotation.id}
+    #quotation.quotation= quotation.text
+    #author.author
+      =link_to quotation.author.full_name, "#author=#{quotation.author.full_name}"
+    #tags.tags
+      - quotation.tags.map do |t|
+        =link_to t.name, "#tag=#{t.name}"

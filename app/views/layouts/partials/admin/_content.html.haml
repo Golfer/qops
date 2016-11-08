@@ -1,8 +1,9 @@
-.container-fluid.main-container.admin
-  .col-md-3.col-lg-3
+.admin-container
+  .col-md-4.col-lg-4
     = render partial: 'admin/shared/left_menu', locals: {tree_categories: @tree_categories}
-  .col-md-9.col-lg-9
-    = render partial: 'shared/flash_messages'
+  .col-md-8.col-lg-8
+    = render partial: 'admin/shared/flash_messages'
     .data_contents
       = yield
     = yield :scripts
+    .push-footer

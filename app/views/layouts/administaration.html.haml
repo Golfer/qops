@@ -4,8 +4,9 @@
   = stylesheet_link_tag    :admin, media: :all
   = csrf_meta_tags
   %body
-    = render 'layouts/partials/admin/nav_bar'
-    = render 'layouts/partials/admin/content'
+    .container
+      = render 'layouts/partials/admin/nav_bar'
+      = render 'layouts/partials/admin/content'
     = render 'layouts/partials/admin/footer'
   = javascript_include_tag :admin, media: :all
   = yield :javascript
