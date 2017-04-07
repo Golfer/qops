@@ -1,10 +1,10 @@
 # Bundle settings
-# set :bundle_gemfile, -> { release_path.join('Gemfile') }
-# set :bundle_dir, -> { shared_path.join('bundle') }
-# set :bundle_flags, '--deployment --quiet'
-# set :bundle_without, %w{development test}.join(' ')
-# set :bundle_binstubs, -> { shared_path.join('bin') }
-# set :bundle_roles, :all
+set :bundle_gemfile, -> { release_path.join('Gemfile') }
+set :bundle_dir, -> { shared_path.join('bundle') }
+set :bundle_flags, '--deployment --quiet'
+set :bundle_without, %w{development test}.join(' ')
+set :bundle_binstubs, -> { shared_path.join('bin') }
+set :bundle_roles, :all
 
 set :stage, :production
 server '95.46.98.193', user: 'deploy', roles: %w{web app db}
@@ -33,9 +33,6 @@ server '95.46.98.193', user: 'deploy', roles: %w{web app db}
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-# role :app, %w{deploy@95.46.98.193}
-# role :web, %w{deploy@95.46.98.193}
-# role :db,  %w{deploy@95.46.98.193}
 
 
 # Configuration

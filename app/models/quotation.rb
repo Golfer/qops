@@ -11,7 +11,7 @@ class Quotation < ApplicationRecord
 
   validates :text, presence: true
 
-  scope :publicated, -> { includes(:tags).where(publicated: true)}
+  scope :publicated, -> { includes(:tags).where(publicated: true).order(updated_at: :desc) }
 
 
   def self.latest(limit = DEFAULT_LATEST_RECORD)

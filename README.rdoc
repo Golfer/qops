@@ -1,10 +1,11 @@
-== Q-project WIKI
+[![Build Status](https://api.travis-ci.org/Golfer/qops.svg?branch=master)](http://travis-ci.org/Golfer/qops)
+== Q-project
 
  * Q-OPS
 
   APP has two part
-    Back - end
-    Fron - tend
+    Backend
+    Frontend
 
   RUBY Version 2.3.1
 
@@ -14,45 +15,6 @@
     - Development /MYSQL/
     - Production /Postgrase/
 ```
-
-* Fix problem SET DB after update rails to 5.0.0
-    RUN this ->
-        rake db:environment:set RAILS_ENV=development; bundle exec rake db:drop db:create db:migrate
-
-*----------------------------------------------*
-  => Action Cable install & configure
-      http://rusrails.ru/action-cable-overview
-
-      https://github.com/rails/actioncable-examples
-      https://www.youtube.com/watch?v=n0WUjGkDFS0
-      http://www.thegreatcodeadventure.com/rails-5-preview-action-cable/
-       =>  *** For deploy Action cable
-           https://gorails.com/episodes/deploy-actioncable-and-rails-5
-
-  => turbolinks
-      https://github.com/turbolinks/turbolinks/wiki/Turbolinks-5-FAQ
-
-
-  => Devise Invitable
-    https://github.com/scambra/devise_invitable
-
-  => Active Model Serializer
-    https://github.com/rails-api/active_model_serializers/tree/master/docs
-    https://kirillplatonov.com/2014/11/04/active_model_serializer_vs_jbuilder/
-
-
---------------------------------------------------------------
-Static analysis tool which checks Ruby on Rails applications for security vulnerabilities
-    https://github.com/presidentbeef/brakeman
-
-Prints Ruby objects in full color exposing their internal structure with proper indentation.
-Rails ActiveRecord objects and usage within Rails templates are supported via included mixins.
-    https://github.com/awesome-print/awesome_print
-
-    usage at console: ap Oject
-
-
-
 ------------ API ----------
 
 JSON Structure Multy Upload

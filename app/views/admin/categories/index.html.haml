@@ -1,0 +1,4 @@
+- if @categories
+  .tags
+    - @categories.map do |t|
+      = link_to t.name, "##{t.name}"

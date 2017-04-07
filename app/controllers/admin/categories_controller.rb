@@ -1,7 +1,7 @@
 module Admin
   class CategoriesController < Admin::BaseAdminController
     before_action :current_category, only: %i(update edit quotations destroy)
-    before_action :categories, only: %i(new create update edit)
+    before_action :categories, only: %i(index new create update edit)
 
     def index
     end

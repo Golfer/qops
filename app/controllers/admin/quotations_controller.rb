@@ -6,7 +6,7 @@ module Admin
     end
 
     def index
-      @quotations = Quotation.paginate(page: params[:page],
+      @quotations = Quotation.publicated.paginate(page: params[:page],
                                          per_page: Admin::BaseAdminController::PER_PAGE)
     end
 
