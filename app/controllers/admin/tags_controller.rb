@@ -1,5 +1,8 @@
 module Admin
   class TagsController < Admin::BaseAdminController
+
+    before_action :all_tags, only: %i(index)
+
     def show
     end
 
@@ -16,6 +19,12 @@ module Admin
     end
 
     def published
+    end
+
+    private
+
+    def all_tags
+      @tags ||= Tag.all_data
     end
   end
 end

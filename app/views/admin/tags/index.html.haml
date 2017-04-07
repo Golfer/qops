@@ -1,2 +1,4 @@
-%h1 Admin::Tags#index
-%p Find me in app/views/admin/tags/index.html.haml
+- if @tags
+  .tags
+    - @tags.map do |t|
+      = link_to t.name, "##{t.name}"
